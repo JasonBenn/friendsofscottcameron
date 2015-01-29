@@ -1,28 +1,29 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To do:
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Bio:
+-- One page.
+
+Platform:
+-– One page.
+
+Issues: 
+-- Scott will be adding one a month for maybe six months.
+a) build a Content Management System (CMS) and teach Scott how to use it
+b) he emails me new issues, which I'd convert to HTML and insert into the website
+
+Volunteer:
+-- One page asking for contact info and types of volunteer activities like a “Check the box” the person wants to do.  Scott would collect this information via email - a new email with every form submission.
+
+Donate:
+-- Sign up for a Stripe account (https://stripe.com/) in Scott's name and set up automatic transfers to Scott's campaign account. Scott would receive the money 2 days after the contribution from the site. The account would have to be for Friends of Scott Cameron. 
+?? How do we get the money into our bank account?  Does Stripe just send me a check?
+
+Share your ideas with Scott:
+-- Clickable link that opens up your existing email client and prefills the "to:" field with, for example, "scott@friendsofscottcameron.com".
+
+
+
+???
+
+Where will election info go?
