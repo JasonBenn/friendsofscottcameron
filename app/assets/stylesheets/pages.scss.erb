@@ -3,22 +3,37 @@ body {
 }
 
 .header {
-  background-image: url('<%= image_path('header.jpg') %>');
+  background-image: url('<%= image_path('background.jpg') %>');
   height: 48em;
   position: relative;
 
   .title {
+    position: relative;
+    color: white;
+    text-shadow: 0 5px 5px rgba(0, 0, 0, .7);
     text-align: center;
     .quiet-font { font-family: 'Playfair Display', serif; }
     .loud-font { font-family: 'Abril Fatface', cursive; }
     .italic { font-style: italic; }
+    .shadow ~ * { 
+      margin: none; 
+      padding: none; 
+      height: 1em; 
+      z-index: 2;
+    }
   
-    .elect {}
-    .scott-cameron {}
-    .to-the {}
-    .northern-virginia {}
-    .soil-and-water {}
-    .conservation-board {}
+    .elect { font-size: 4.3em; letter-spacing: 5px; }
+    .scott-cameron { font-size: 6.8em; }
+    .to-the-northern-virginia { font-size: 3.6em; }
+    .soil-and-water { font-size: 5.3em; }
+    .conservation-board { font-size: 4.3em; }
+    .shadow {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
   }
 
 }
