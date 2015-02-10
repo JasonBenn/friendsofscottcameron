@@ -37,6 +37,9 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.0)
+    autoprefixer-rails (5.1.5)
+      execjs
+      json
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
@@ -214,7 +217,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  coffee-rails (~> 4.1)
+  autoprefixer-rails
   guard-livereload (~> 2.4)
   haml-rails (~> 0.8)
   jbuilder (~> 2.2)

@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.browser/dist/jquery.browser.min
 //= require turbolinks
 //= require_tree .

@@ -23,7 +23,7 @@ gem "rails", "~> 4.2"
 gem "pg", "~> 0.18"
 gem "sass-rails", "~> 5.0"
 gem "uglifier", "~> 2.7"
-gem "coffee-rails", "~> 4.1"
 gem "jquery-rails", "~> 4.0"
 gem "turbolinks", "~> 2.5"
 gem "jbuilder", "~> 2.2"
+gem 'autoprefixer-rails'
