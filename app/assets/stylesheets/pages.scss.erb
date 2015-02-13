@@ -52,7 +52,20 @@ body {
 }
 
 .container {
+  max-width: 1080px;
   display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+
+  .sidebar {
+    flex-grow: 1;
+    padding: 0 2em;
+  }
+
+  .content-box {
+    flex-grow: 4;
+    max-width: 800px;
+  }
 
 }
 
@@ -60,22 +73,34 @@ $tealLight: #78C0BB;
 $tealDark: #4B9990;
 
 .sidebar {
-  flex-grow: 1;
-  // min-width: 22em;
-  margin-right: 2em;
+  position: relative;
+  top: -20em;
 
-  .profile-box {
-    position: relative;
+  > .profile-box {
     background-color: $tealLight;
     background-image: linear-gradient(to bottom right, $tealLight, $tealDark);
-    width: 22em;
     height: 30em;
-    top: -20em;
+    width: 22em;
 
-    .profile {
-      margin: 1em;
-      width: 20em;
-      height: 28em;
+    > .profile {
+      padding: 1em;
+      box-sizing: border-box;
+      width: 100%;
+    }
+  }
+
+  .links {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 2.22em;
+    
+    > .link {
+      margin-top: 1.5em;
+    }
+
+    > .link > a {
+      color: $tealDark;
+      text-decoration: none;
     }
   }
 }
