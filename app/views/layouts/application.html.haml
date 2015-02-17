@@ -8,4 +8,29 @@
     = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Playfair+Display:400,400italic|Abril+Fatface'
     = csrf_meta_tags
   %body
-    = yield
+    .header
+      %img.shadow{src: image_path('title-shadow.png')}
+      .title
+        .quiet-font.italic.elect ~ ELECT ~
+        .loud-font.scott-cameron SCOTT CAMERON
+        .quiet-font.to-the-northern-virginia
+          %span.italic.to-the to the
+          %span.northern-virginia Northern Virginia
+        .loud-font.soil-and-water SOIL AND WATER
+        .loud-font.conservation-board CONSERVATION BOARD
+
+    .container
+      .sidebar
+        .profile-box
+          %img.profile{src: image_path('profile.jpg')}
+
+        .links
+          %a.link{href: '/bio', class: ('active' if @active == 'bio')} Bio
+          .link{href: '/platform', class: ('active' if @active == 'platform')} Platform
+          .link{href: '/issues', class: ('active' if @active == 'issues')} Issues
+          .link{href: '/donate', class: ('active' if @active == 'donate')} Donate
+          .link{href: '/share', class: ('active' if @active == 'share')} Share your ideas
+
+      .content-box
+        .content
+          = yield
