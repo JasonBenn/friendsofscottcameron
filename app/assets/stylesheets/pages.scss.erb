@@ -125,6 +125,40 @@ $tealDarkActive: hsla(173, 37%, 50%, 1);
 
 $blueLight: #5DBADB;
 $blueDark: #448FAB;
+$textDarkest: #242424;
+$textDark: #484848;
+$textLight: #808080;
+$textLightest: #bfbfbf;
+
+@mixin avenirLight {
+  font-family: 'Avenir-Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: normal;
+}
+
+@mixin avenirBook {
+  font-family: 'Avenir-Book', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: normal;
+}
+
+@mixin avenirRoman {
+  font-family: 'Avenir-Roman', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: normal;
+}
+
+@mixin avenirMedium {
+  font-family: 'Avenir-Medium', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: normal;
+}
+
+@mixin avenirHeavy {
+  font-family: 'Avenir-Heavy', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: normal;
+}
+
+@mixin avenirBlack {
+  font-family: 'Avenir-Black', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: normal;
+}
 
 .content-box {
   background-color: $blueLight;
@@ -136,5 +170,28 @@ $blueDark: #448FAB;
     background-color: white;
     font-size: 16px;
     line-height: 1.5em;
+
+    h3 {
+      @include avenirRoman;
+      color: $textDark;
+      text-align: center;
+    }
+
+    h4 {
+      @include avenirRoman;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 1.5em;
+      color: $textLightest;
+    }
+
+    ul {
+      margin-top: 0;
+      margin-bottom: 2em;
+    }
+
+    li {
+      color: $textLight;
+    }
   }
 }
