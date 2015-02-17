@@ -15,12 +15,16 @@ body {
   background-color: $backgroundBeige;
 }
 
+$mediumBorderRadius: 7px;
+$smallBorderRadius: 3px;
+
 .header {
   background-image: url('<%= image_path('background.jpg') %>');
   background-size: cover;
   background-position: center 0;
   height: 48em;
   position: relative;
+  border-radius: 0 0 $mediumBorderRadius $mediumBorderRadius;
 
   .shadow { 
     @include absolute-center;
@@ -68,8 +72,9 @@ body {
     margin-top: 4em;
     margin-bottom: 4em;
   }
-
 }
+
+
 
 $tealLight: #78C0BB;
 $tealDark: hsla(173, 37%, 45%, 1);
@@ -85,11 +90,13 @@ $tealDarkActive: hsla(173, 37%, 50%, 1);
     background-image: linear-gradient(to bottom right, $tealLight, $tealDark);
     height: 30em;
     width: 22em;
+    border-radius: $smallBorderRadius;
 
     > .profile {
       padding: 1em;
       box-sizing: border-box;
       width: 100%;
+      border-radius: $mediumBorderRadius;
     }
   }
 
@@ -163,6 +170,7 @@ $textLightest: #bfbfbf;
 .content-box {
   background-color: $blueLight;
   background-image: linear-gradient(to bottom right, $blueLight, $blueDark);
+  border-radius: $mediumBorderRadius;
 
   .content {
     margin: 2em;
@@ -170,6 +178,7 @@ $textLightest: #bfbfbf;
     background-color: white;
     font-size: 16px;
     line-height: 1.5em;
+    border-radius: $smallBorderRadius;
 
     h3 {
       @include avenirRoman;
