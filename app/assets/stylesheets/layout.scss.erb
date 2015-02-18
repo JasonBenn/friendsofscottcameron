@@ -1,0 +1,132 @@
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  
+}
+
+body {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header {
+  height: 48em;
+  position: relative;
+
+  .shadow { 
+    @include absolute-center;
+    margin: none; 
+    padding: none; 
+    z-index: 1;
+  }
+
+  .title {
+    @include absolute-center;
+    z-index: 2;
+
+  }
+
+}
+
+.container {
+  max-width: 1080px;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+
+  .sidebar {
+    flex-grow: 1;
+    padding: 0 2em;
+    position: relative;
+    top: -15em;
+    max-width: 220px;
+
+    > .profile-box {
+      height: 100%;
+      width: 100%;
+
+      > .profile {
+        padding: 1em;
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
+
+    .links {
+      > .link {
+        margin-top: 1em;
+        padding: .5em;
+        box-sizing: border-box;
+        display: block;
+      }
+    }
+  }
+
+  .content-box {
+    flex-grow: 4;
+    max-width: 800px;
+    margin-top: 4em;
+    margin-bottom: 4em;
+
+    > .content {
+      margin: 2em;
+      padding: 2em;
+    }
+  }
+}
+
+@media (min-width: 1100px) {
+  // Desktop
+  body { font-size: 10px; }
+}
+
+@media (max-width: 1100px) {
+  body { font-size: 9px; }
+}
+
+@media (max-width: 600px) {
+  // Mobile
+  body {
+    width: 100%;
+    font-size: 8px;
+    margin: 0;
+  }
+
+  .header {
+    border-radius: 0;
+  }
+
+  .header .title {
+    white-space: initial;
+  }
+
+  .container {
+    flex-flow: column nowrap;
+    width: 100%;
+
+
+    .profile-box {
+      display: none;
+    }
+
+    .sidebar {
+      top: initial;
+      padding: 0 1em;
+      max-width: initial;
+    }
+
+    .content-box {
+      max-width: initial;
+      border-radius: 0;
+
+      > .content {
+        margin: 1em 0;
+        border-radius: 0;
+        padding: .6em;
+      }
+    }
+  }
+
+}

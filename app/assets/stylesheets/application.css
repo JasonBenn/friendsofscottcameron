@@ -11,6 +11,8 @@
  * file per style scope.
  *
  *= require normalize
- *= require_tree .
+ *= require avenir
+ *= require pages
+ *= require layout
  *= require_self
  */
