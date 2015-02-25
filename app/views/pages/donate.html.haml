@@ -1,2 +1,15 @@
-%h1 Pages#donate
-%p Find me in app/views/pages/donate.html.erb
+#donate
+  %h2 Let's protect our environment.
+  %h3 Make a secure donation to support the campaign today.
+
+  %button.amount{value: '1500'} $15.00
+  %button.amount{value: '3500'} $35.00
+  %button.amount{value: '5000'} $50.00
+  %button.amount{value: '10000'} $100.00
+  .other
+    Other Amount...
+    %input.amount
+    %button.submit Submit
+
+-# %h4 Mailed donations also accepted:
+-# %p.text-center 1005 N Tuckahoe St<br/>Fall Church, VA 22046

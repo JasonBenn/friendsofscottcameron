@@ -16,8 +16,18 @@ Volunteer:
 -- One page asking for contact info and types of volunteer activities like a “Check the box” the person wants to do.  Scott would collect this information via email - a new email with every form submission.
 
 Donate:
--- Sign up for a Stripe account (https://stripe.com/) in Scott's name and set up automatic transfers to Scott's campaign account. Scott would receive the money 2 days after the contribution from the site. The account would have to be for Friends of Scott Cameron. 
-?? How do we get the money into our bank account?  Does Stripe just send me a check?
+A great donate form that looks like Obama's.
+
+Step 1: pick an amount.
+Click events change the value of a hidden input.
+Using raw JS to pull the values (or throw an incomplete error), launch Stripe.
+Can probably use Checkout for this.
+User submits info to Stripe, Stripe sends token to my backend, I will experiment with an account for me.
+Once I'm sure it works with my account, write email to summarize for Scott.
+Hide form, show thank you note. Just like Obama's.
+
+After this, there's very little left to do. An email form, maybe.
+
 
 Share your ideas with Scott:
 -- Clickable link that opens up your existing email client and prefills the "to:" field with, for example, "scott@friendsofscottcameron.com".
@@ -27,3 +37,4 @@ Share your ideas with Scott:
 ???
 
 Where will election info go?
+

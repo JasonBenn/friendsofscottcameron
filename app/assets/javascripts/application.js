@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require jquery.browser/dist/jquery.browser.min
 //= require turbolinks
+//= require stripe-checkout-v2
 //= require_tree .
