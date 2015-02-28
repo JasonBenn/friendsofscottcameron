@@ -28,9 +28,9 @@
         .links
           %a.link{href: '/bio', class: ('active' if @active == 'bio')} Bio
           %a.link{href: '/platform', class: ('active' if @active == 'platform')} Platform
-          .link{href: '/issues', class: ('active' if @active == 'issues')} Issues
+          %a.link.hide{href: '/issues', class: ('active' if @active == 'issues')} Issues
           %a.link{href: '/donate', class: ('active' if @active == 'donate')} Donate
-          .link{href: '/share', class: ('active' if @active == 'share')} Share your ideas
+          %a.link{href: 'mailto:scott@friendsofscottcameron.com'} Share your ideas
 
       .content-box
         .content

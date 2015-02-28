@@ -1,16 +1,6 @@
 To do:
 
 
-Bio:
--- One page.
-
-Platform:
--– One page.
-
-Issues: 
--- Scott will be adding one a month for maybe six months.
-a) build a Content Management System (CMS) and teach Scott how to use it
-b) he emails me new issues, which I'd convert to HTML and insert into the website
 
 Volunteer:
 -- One page asking for contact info and types of volunteer activities like a “Check the box” the person wants to do.  Scott would collect this information via email - a new email with every form submission.

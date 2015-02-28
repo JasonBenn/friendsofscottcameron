@@ -1,15 +1,35 @@
 $(document).ready(function() {
   // when page loads, cache some calculations
-  if ($.browser.desktop) {
-    $window = $(window)
-    $window.scroll(function(e) {
-      // console.log(e)
-      // use translate3d to shift.
-      return false;
-    })
-  }
+  // if ($.browser.desktop) {
+  //   $window = $(window)
+  //   $window.scroll(function(e) {
+  //     // console.log(e)
+  //     // use translate3d to shift.
+  //     return false;
+  //   })
+  // }
 
-  $('button.amount').click(function(e) {
+  var handler = StripeCheckout.configure({
+    // Your Account -> Account Settings -> API Keys -> Live Publishable Key
+    key: 'pk_test_E1SMWXgfw5xBodu6wQBOXfLi',
+    name: 'Friends of Scott Cameron',
+    panelLabel: 'Donate',
+    token: function(token) {
+      debugger;
+      // invoke when the Checkout process is complete
+      // token.id can be used to create a charge or customer. 
+      // token.email contains the email address entered by the user
+
+      // this is where we send the token to the backend!
+    }
+  });
+
+  // close on page navigation
+  $(window).on('popstate', function() {
+    handler.close();
+  });
+
+  $('.button.amount').click(function(e) {
     var $button = $(e.target);
     stripePayment($button.val(), $button.text())
   });
@@ -25,15 +45,9 @@ $(document).ready(function() {
       $('form').append($input).submit();
     };
 
-    StripeCheckout.open({
-      key:         'pk_test_E1SMWXgfw5xBodu6wQBOXfLi',
-      address:     true,
-      amount:      value,
-      currency:    'usd',
-      name:        'Friends of Scott Cameron',
+    handler.open({
       description: description,
-      panelLabel:  'Checkout',
-      token:       token
+      amount: value
     });
 
     return false;

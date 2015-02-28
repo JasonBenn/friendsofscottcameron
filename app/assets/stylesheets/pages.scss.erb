@@ -1,6 +1,6 @@
 $green: hsla(151, 100%, 22%, 1);
-$greenLight: hsla(151, 100%, 17%, 1);
-$greenDark: hsla(151, 50%, 32%, 1);
+$greenDark: hsla(151, 100%, 17%, 1);
+$greenLight: hsla(151, 50%, 32%, 1);
 $greenDarkHover: hsla(151, 50%, 47%, 1);
 $greenDarkActive: hsla(151, 50%, 42%, 1);
 
@@ -59,7 +59,7 @@ $smallBorderRadius: 3px;
 
   > .profile-box {
     background-color: $green;
-    background: linear-gradient(to top right, $green, $greenDark);
+    background: linear-gradient(to top right, $green, $greenLight);
     border-radius: $smallBorderRadius;
 
     > .profile {
@@ -75,7 +75,7 @@ $smallBorderRadius: 3px;
     > .link {
       border-radius: 4px;
       border: 3px solid $backgroundBeige;
-      color: $greenDark;
+      color: $greenLight;
       transition: all .1s;
       user-select: none;
       text-decoration: none;
@@ -125,7 +125,7 @@ $smallBorderRadius: 3px;
 
 .content-box {
   background-color: $green;
-  background: linear-gradient(to top left, $green, $greenDark);
+  background: linear-gradient(to top left, $green, $greenLight);
   border-radius: $mediumBorderRadius;
 
   .content {
@@ -163,4 +163,85 @@ $smallBorderRadius: 3px;
       color: $textLight;
     }
   }
+}
+
+.hide {
+  display: none !important;
+}
+
+#donate {
+
+  .buttons {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    max-width: 400px;
+  }
+
+  .button {
+    flex-grow: 1;
+  }
+
+  .button, .submit {
+    position: relative;
+    border-radius: 0 0 5px 5px;
+    color: white;
+    background-color: $greenLight;
+    top: 0px;
+    box-shadow: 0 6px $greenDark;
+    transition: all .03s;
+    user-select: none;
+
+    &:hover {
+      top: 2px;
+      box-shadow: 0 4px $greenDark;
+    }
+
+    &:active {
+      top: 4px;
+      box-shadow: 0 2px $greenDark;
+    }
+  }
+
+  @mixin readableCopy {
+    text-align: center;
+    font-size: 19px;
+    letter-spacing: 1px;
+  }
+
+  .amount {
+    margin: 1em;
+    padding: .5em 1em;
+    @include readableCopy;
+    font-weight: 700;
+
+    width: 27%;
+  }
+
+  .other {
+    width: 100%;
+    margin: 1em;
+    display: flex;
+    flex-wrap: nowrap;
+
+    * {
+      padding: .5em 1em;
+    }
+
+    input {
+      flex-grow: 2;
+      position: relative;
+      top: 6px;
+      margin-right: 1em;
+      @include readableCopy;
+      border: 1px inset $backgroundBeige; 
+    }
+
+    .submit {
+      @include readableCopy;
+      flex-grow: 1;
+    }
+  }
+
+
 }
