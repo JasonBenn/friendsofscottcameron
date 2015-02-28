@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   post 'charge' => 'payments#charge'
   get 'share' => 'pages#share'
 
+  resources :charges
+
   root 'pages#bio'
 
 end

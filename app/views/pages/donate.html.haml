@@ -3,13 +3,14 @@
   %h3 Make a secure donation to support the campaign today.
 
   .buttons
-    .button.amount{value: '5000'} $50.00
-    .button.amount{value: '10000'} $100.00
-    .button.amount{value: '10000'} $250.00
-    .button.amount{value: '10000'} $500.00
+    %button.amount{value: '5000'} $50.00
+    %button.amount{value: '10000'} $100.00
+    %button.amount{value: '10000'} $250.00
+    %button.amount{value: '10000'} $500.00
     .other
       %input{placeholder: 'Other Amount...'}
-      .button.submit Donate 
+      / TODO: mask input!
+      %button.submit Donate 
 
--# %h4 Mailed donations also accepted:
+-# TODO: %h4 Mailed donations also accepted:
 -# %p.text-center 1005 N Tuckahoe St<br/>Fall Church, VA 22046
