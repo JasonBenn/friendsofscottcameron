@@ -1,5 +1,17 @@
 $(document).ready(function() {
   var selectedAmount;
+  var selectedDescription;
+
+  $('.other input').maskMoney({ prefix: '$' });
+
+  $('.other input').on('keyup keypress blur', function(e) {
+    var money = $('.other input').val();
+    if (money && money !== '$0.00') {
+      $('.other button').removeClass('disabled');
+    } else {
+      $('.other button').addClass('disabled');
+    }
+  })
 
   var handler = StripeCheckout.configure({
     key: STRIPE_PUBLISHABLE_KEY,
@@ -23,14 +35,22 @@ $(document).ready(function() {
 
   $('button.amount').click(function(e) {
     var $button = $(e.target);
-    selectedAmount = $button.val();
+    selectedDescription = $button.text();
+    selectedAmount = $button.maskMoney('unmasked')[0];
+    stripePayment($button.text())
+  });
+
+  $('.other .submit:not(.disabled)').click(function(e) {
+    var $button = $(e.target);
+    selectedDescription = $button.siblings('input').val();
+    selectedAmount = $button.maskMoney('unmasked')[0];
     stripePayment($button.text())
   });
 
   function stripePayment(description) {
     handler.open({
       // TODO: description not really needed, could build from any amount.
-      description: description,
+      description: selectedDescription,
       amount: selectedAmount
     });
 

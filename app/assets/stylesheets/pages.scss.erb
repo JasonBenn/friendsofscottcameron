@@ -1,3 +1,6 @@
+$grey: #A3A3A3;
+$greyDark: #7B7B7B;
+
 $green: hsla(151, 100%, 22%, 1);
 $greenDark: hsla(151, 100%, 17%, 1);
 $greenLight: hsla(151, 50%, 32%, 1);
@@ -243,6 +246,15 @@ $smallBorderRadius: 3px;
     .submit {
       @include readableCopy;
       flex-grow: 1;
+
+      &.disabled {
+        top: 2px;
+        box-shadow: 0 4px $greyDark;
+        background-color: $grey;
+        user-select: none;
+        cursor: initial;
+      }
+
     }
   }
 

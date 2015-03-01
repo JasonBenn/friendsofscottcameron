@@ -15,6 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery.browser": "~0.0.7"
+    "jquery.browser": "~0.0.7",
+    "jquery-maskmoney": "~3.0.2"
   }
 }
