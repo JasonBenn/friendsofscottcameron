@@ -42,8 +42,8 @@ $smallBorderRadius: 3px;
     white-space: nowrap;
     line-height: 1.05;
 
-    .quiet-font { font-family: 'Playfair Display', serif; }
-    .loud-font { font-family: 'Abril Fatface', cursive; }
+    .quiet-font { font-family: 'Playfair Display', helvetica, serif; }
+    .loud-font { font-family: 'Abril Fatface', helvetica, serif; }
     .italic { font-style: italic; }
   
     .elect { font-size: 4.3em; letter-spacing: 5px; }
@@ -237,6 +237,7 @@ $smallBorderRadius: 3px;
       margin-right: 1em;
       @include readableCopy;
       border: 1px inset $backgroundBeige; 
+      outline: 0;
     }
 
     .submit {
