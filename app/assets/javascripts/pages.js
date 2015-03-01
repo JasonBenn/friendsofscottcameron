@@ -4,9 +4,13 @@ $(document).ready(function() {
 
   $('.other input').maskMoney({ prefix: '$' });
 
+  $.fn.noMoney = function() {
+    var money = $(this).val();
+    return money && money !== '$0.00'
+  }
+
   $('.other input').on('keyup keypress blur', function(e) {
-    var money = $('.other input').val();
-    if (money && money !== '$0.00') {
+    if ($('.other input').noMoney()) {
       $('.other button').removeClass('disabled');
     } else {
       $('.other button').addClass('disabled');
@@ -40,7 +44,8 @@ $(document).ready(function() {
     stripePayment($button.text())
   });
 
-  $('.other .submit:not(.disabled)').click(function(e) {
+  $('.other .submit').click(function(e) {
+    if ($(this).hasClass('disabled')) return;
     var $button = $(e.target);
     selectedDescription = $button.siblings('input').val();
     selectedAmount = $button.maskMoney('unmasked')[0];
@@ -49,7 +54,6 @@ $(document).ready(function() {
 
   function stripePayment(description) {
     handler.open({
-      // TODO: description not really needed, could build from any amount.
       description: selectedDescription,
       amount: selectedAmount
     });

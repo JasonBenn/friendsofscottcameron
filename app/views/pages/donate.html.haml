@@ -9,11 +9,7 @@
     %button.amount{value: '10000'} $500.00
     .other
       %input{placeholder: 'Other Amount...'}
-      / TODO: mask input!
-      %button.submit.disabled Donate 
-
--# TODO: %h4 Mailed donations also accepted:
--# %p.text-center 1005 N Tuckahoe St<br/>Fall Church, VA 22046
+      %button.submit.disabled Donate
 
 :javascript
   var STRIPE_PUBLISHABLE_KEY = "#{ENV['stripe_publishable_key']}"
