@@ -135,6 +135,8 @@ GEM
       nenv (~> 0.1)
       shellany (~> 0.0)
     pg (0.18.1)
+    pony (1.11)
+      mail (>= 2.0)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -239,6 +241,7 @@ DEPENDENCIES
   jbuilder (~> 2.2)
   jquery-rails (~> 4.0)
   pg (~> 0.18)
+  pony
   pry (~> 0.10)
   pry-remote (~> 0.1)
   quiet_assets (~> 1.1)
