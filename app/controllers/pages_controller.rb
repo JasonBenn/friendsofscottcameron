@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def bio
     # TODO: make this work, using code from Jasmine's tool on home computer.
-    Pony.mail(:to => 'jasoncbenn@gmail.com', :from => 'bugs@friendsofscottcameron.com', :subject => 'Bug incident!', :body => 'Check friendsofscottcameron.com Heroku logs!')
+    # Pony.mail(:to => 'jasoncbenn@gmail.com', :from => 'bugs@friendsofscottcameron.com', :subject => 'Bug incident!', :body => 'Check friendsofscottcameron.com Heroku logs!')
     @active = 'bio'
   end
 
