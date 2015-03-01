@@ -26,12 +26,9 @@ $(document).ready(function() {
       token.amount = selectedAmount;
       $.post('/charges', token).done(function(response) {
         if (response.success) {
-          // TODO: display success message. sweetAlert?
-           // {success: true, message: "Thank you for your donation of 5000"}
-          debugger
+          sweetAlert("Thank you for your donation!", "We've emailed you a receipt.", "success")
         } else {
-          // TODO: display error message. 
-          debugger
+          sweetAlert("Error", response.message, "error")
         }
       });
     }
@@ -66,6 +63,5 @@ $(document).ready(function() {
     handler.close();
   });
 });
-
 
 // TODO: I'd like the email notification to go to the scott@friendsofscottcameron.com email address, assuming that will work.  I do need to figure out how to access it.

@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "jquery.browser": "~0.0.7",
-    "jquery-maskmoney": "~3.0.2"
+    "jquery-maskmoney": "~3.0.2",
+    "sweetalert": "~0.4.2"
   }
 }

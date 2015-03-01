@@ -16,4 +16,5 @@
 //= require turbolinks
 //= require stripe-checkout-v2
 //= require jquery-maskmoney/dist/jquery.maskMoney.min
+//= require sweetalert/lib/sweet-alert.min
 //= require_tree .

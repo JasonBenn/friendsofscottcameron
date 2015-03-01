@@ -29,3 +29,4 @@ gem "jbuilder", "~> 2.2"
 gem 'autoprefixer-rails'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'figaro'
+gem 'pony'
