@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require normalize
+ *= require sweetalert/lib/sweet-alert
  *= require avenir
  *= require pages
  *= require layout
