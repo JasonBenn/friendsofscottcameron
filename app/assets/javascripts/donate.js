@@ -1,16 +1,20 @@
+//= require jquery-maskmoney/dist/jquery.maskMoney.min
+//= require stripe-publishable-key
+
 $(document).ready(function() {
   var selectedAmount;
   var selectedDescription;
 
   $('.other input').maskMoney({ prefix: '$' });
 
-  $.fn.noMoney = function() {
-    var money = $(this).val();
-    return money && money !== '$0.00'
+  function exceedsMinimumValue($el) {
+    var value = $el.maskMoney('unmasked')[0] * 100
+    return value >= 50;
   }
 
+
   $('.other input').on('keyup keypress blur', function(e) {
-    if ($('.other input').noMoney()) {
+    if (exceedsMinimumValue($('.other input'))) {
       $('.other button').removeClass('disabled');
     } else {
       $('.other button').addClass('disabled');
@@ -37,15 +41,16 @@ $(document).ready(function() {
   $('button.amount').click(function(e) {
     var $button = $(e.target);
     selectedDescription = $button.text();
-    selectedAmount = $button.maskMoney('unmasked')[0];
+    selectedAmount = $button.val();
     stripePayment($button.text())
   });
 
   $('.other .submit').click(function(e) {
     if ($(this).hasClass('disabled')) return;
     var $button = $(e.target);
-    selectedDescription = $button.siblings('input').val();
-    selectedAmount = $button.maskMoney('unmasked')[0];
+    var $input = $button.siblings('input');
+    selectedDescription = $input.val();
+    selectedAmount = $input.maskMoney('unmasked')[0] * 100;
     stripePayment($button.text())
   });
 
