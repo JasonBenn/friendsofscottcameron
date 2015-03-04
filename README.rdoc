@@ -1,10 +1,6 @@
+I'd like the email notification to go to the scott@friendsofscottcameron.com email address, assuming that will work.  I do need to figure out how to access it.
+
+Add Policy paper.
+
 Volunteer:
 -- One page asking for contact info and types of volunteer activities like a “Check the box” the person wants to do.  Scott would collect this information via email - a new email with every form submission.
-
-Share your ideas with Scott:
--- Clickable link that opens up your existing email client and prefills the "to:" field with, for example, "scott@friendsofscottcameron.com".
-
-???
-
-Where will election info go?
-

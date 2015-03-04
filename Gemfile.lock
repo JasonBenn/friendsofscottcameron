@@ -235,13 +235,13 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
-  figaro
+  figaro (= 1.1)
   guard-livereload (~> 2.4)
   haml-rails (~> 0.8)
   jbuilder (~> 2.2)
   jquery-rails (~> 4.0)
   pg (~> 0.18)
-  pony
+  pony (~> 1.11)
   pry (~> 0.10)
   pry-remote (~> 0.1)
   quiet_assets (~> 1.1)

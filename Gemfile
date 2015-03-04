@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "2.1.5"
+ruby "2.1.2"
 
 group :test, :development do
   gem "guard-livereload", "~> 2.4"
@@ -28,5 +28,5 @@ gem "turbolinks", "~> 2.5"
 gem "jbuilder", "~> 2.2"
 gem 'autoprefixer-rails'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
-gem 'figaro'
-gem 'pony'
+gem 'figaro', "1.1"
+gem 'pony', "~> 1.11"
