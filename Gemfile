@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "2.1.2"
+ruby "2.1.5"
 
 group :test, :development do
   gem "guard-livereload", "~> 2.4"
@@ -30,3 +30,4 @@ gem 'autoprefixer-rails'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'figaro', "1.1"
 gem 'pony', "~> 1.11"
+gem 'redcarpet', "~> 3.2"
