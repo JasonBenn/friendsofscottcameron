@@ -1,5 +1,15 @@
-%h2 Policy Positions
+#issues
+  %h2 Policy Positions
 
-- @issues.each do |issue|
-  .issue
-    != issue
+
+  %ul
+    %li 
+      %a{href: '#issue-1'} Maximizing Fairfax Environmental Benefits from Your Taxes
+    %li 
+      %a{href: '#issue-2'} Keeping Fairfax’s Environmental Dollars in Fairfax
+    %li 
+      %a{href: '#issue-3'} Invasive Species in Fairfax County
+
+  - @issues.each_with_index do |issue, i|
+    .issue{id: "issue-#{i + 1}"}
+      != issue
