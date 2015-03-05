@@ -9,7 +9,7 @@ class PagesController < ApplicationController
 
   def issues
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions = {})
-    @issues = Dir.glob(File.join(Rails.root, 'app/assets/issues/*')).reverse.map { |issue| markdown.render(File.read(issue)) }
+    @issues = Dir.glob(File.join(Rails.root, 'app/assets/issues/*')).sort.reverse.map { |issue| markdown.render(File.read(issue)) }
     @active = 'issues'
   end
 
