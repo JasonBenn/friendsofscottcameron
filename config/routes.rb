@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'vision' => 'pages#vision'
   get 'bio' => 'pages#bio'
   get 'platform' => 'pages#platform'
   get 'issues' => 'pages#issues'
@@ -8,6 +9,6 @@ Rails.application.routes.draw do
 
   resources :charges
 
-  root 'pages#bio'
+  root 'pages#vision'
 
 end

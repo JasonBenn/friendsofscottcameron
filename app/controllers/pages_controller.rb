@@ -1,4 +1,8 @@
 class PagesController < ApplicationController
+  def vision
+    @active = 'vision'
+  end
+
   def bio
     @active = 'bio'
   end

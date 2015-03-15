@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "2.1.5"
+ruby "2.1.2"
 
 group :test, :development do
   gem "guard-livereload", "~> 2.4"

@@ -27,6 +27,7 @@
           %img.profile{src: image_path('profile.jpg')}
 
         .links
+          %a.link{href: '/vision', class: ('active' if @active == 'vision')} Vision
           %a.link{href: '/bio', class: ('active' if @active == 'bio')} Bio
           %a.link{href: '/platform', class: ('active' if @active == 'platform')} Platform
           %a.link{href: '/issues', class: ('active' if @active == 'issues')} Issues
