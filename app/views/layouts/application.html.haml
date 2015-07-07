@@ -3,12 +3,34 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0", :name => "viewport"}
-    %title Friendsofscottcameron
+
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     %script{src: 'https://checkout.stripe.com/v2/checkout.js'}
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Playfair+Display:400,400italic|Abril+Fatface'
     = csrf_meta_tags
+
+    %title Friends of Scott Cameron
+    %link{:href => "http://www.friendsofscottcameron.com/", :rel => "canonical"}
+    %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}
+    %meta{:content => "Scott Cameron", :name => "keywords"}
+    %meta{:content => "Let’s work together to create and maintain an environmentally sustainable and economically prosperous place to raise our families.", :name => "description"}
+
+    / FACEBOOK
+    %meta{:content => "Cleaner Environment, Healthier Community", :property => "og:title"}
+    %meta{:content => "Friends of Scott Cameron", :property => "og:site_name"}
+    %meta{:content => "http://www.friendsofscottcameron.com/", :property => "og:url"}
+    %meta{:content => "Let’s work together to create and maintain an environmentally sustainable and economically prosperous place to raise our families.", :property => "og:description"}
+    %meta{:content => image_path('share_preview.png'), :property => "og:image"}
+    %meta{:content => "website", :property => "og:type"}
+    %meta{:content => "en_US", :property => "og:locale"}
+    
+    / TWITTER
+    %meta{:content => "summary", :property => "twitter:card"}
+    %meta{:content => "Cleaner Environment, Healthier Community", :property => "twitter:title"}
+    %meta{:content => "Let’s work together to create and maintain an environmentally sustainable and economically prosperous place to raise our families.", :property => "twitter:description"}
+    %meta{:content => "http://www.friendsofscottcameron.com/", :property => "twitter:url"}
+    %meta{:content => image_path('share_preview.png'), :property => "twitter:image"}
   %body
     .header
       %img.shadow{src: image_path('title-shadow.png')}
