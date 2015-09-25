@@ -1,0 +1,55 @@
+@mixin avenirLight {
+  font-family: 'Avenir-Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: normal;
+}
+
+@mixin avenirBook {
+  font-family: 'Avenir-Book', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: normal;
+}
+
+@mixin avenirRoman {
+  font-family: 'Avenir-Roman', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: normal;
+}
+
+@mixin avenirMedium {
+  font-family: 'Avenir-Medium', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: normal;
+}
+
+@mixin avenirHeavy {
+  font-family: 'Avenir-Heavy', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: normal;
+}
+
+@mixin avenirBlack {
+  font-family: 'Avenir-Black', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: normal;
+}
+
+$grey: #A3A3A3;
+$greyDark: #7B7B7B;
+
+$green: hsla(151, 100%, 22%, 1);
+$greenDark: hsla(151, 100%, 17%, 1);
+$greenLight: hsla(151, 50%, 32%, 1);
+$greenDarkHover: hsla(151, 50%, 47%, 1);
+$greenDarkActive: hsla(151, 50%, 42%, 1);
+
+$yellow: hsla(57, 75%, 50%, 1);
+
+$tealLight: #78C0BB;
+$tealDark: hsla(173, 37%, 45%, 1);
+$tealDarkHover: hsla(173, 37%, 60%, 1);
+$tealDarkActive: hsla(173, 37%, 50%, 1);
+
+$backgroundBeige: #E9E9E9;
+
+$blueLight: #5DBADB;
+$blueDark: #448FAB;
+
+$textDarkest: #242424;
+$textDark: #484848;
+$textLight: #808080;
+$textLightest: #bfbfbf;

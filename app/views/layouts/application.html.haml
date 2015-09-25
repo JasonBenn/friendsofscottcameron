@@ -10,6 +10,7 @@
     = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Playfair+Display:400,400italic|Abril+Fatface'
     = csrf_meta_tags
 
+
     %title Friends of Scott Cameron
     %link{:href => "http://www.friendsofscottcameron.com/", :rel => "canonical"}
     %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}
@@ -24,7 +25,7 @@
     %meta{:content => image_url('share_preview.png'), :property => "og:image"}
     %meta{:content => "website", :property => "og:type"}
     %meta{:content => "en_US", :property => "og:locale"}
-    
+
     / TWITTER
     %meta{:content => "summary", :property => "twitter:card"}
     %meta{:content => "Cleaner Environment, Healthier Community", :property => "twitter:title"}
@@ -32,6 +33,7 @@
     %meta{:content => "http://www.friendsofscottcameron.com/", :property => "twitter:url"}
     %meta{:content => image_url('share_preview.png'), :property => "twitter:image"}
   %body
+    %banner Announcement: Scott Cameron has been endorsed by the Fairfax League of Conservation Voters!
     .header
       %img.shadow{src: image_path('title-shadow.png')}
       .title
