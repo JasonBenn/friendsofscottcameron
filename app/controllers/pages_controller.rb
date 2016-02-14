@@ -1,4 +1,8 @@
 class PagesController < ApplicationController
+  def scorecard
+    @active = 'scorecard'
+  end
+
   def vision
     @active = 'vision'
   end

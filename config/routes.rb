@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'scorecard' => 'pages#scorecard'
   get 'vision' => 'pages#vision'
   get 'bio' => 'pages#bio'
   get 'platform' => 'pages#platform'
@@ -9,6 +10,6 @@ Rails.application.routes.draw do
 
   resources :charges
 
-  root 'pages#vision'
+  root 'pages#scorecard'
 
 end

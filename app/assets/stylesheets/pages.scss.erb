@@ -104,12 +104,19 @@ banner {
       text-align: center;
     }
 
+
     h4 {
       @include avenirRoman;
       text-align: center;
       margin-top: 0;
       margin-bottom: 1.5em;
       color: $textLightest;
+    }
+
+    th {
+      @include avenirRoman;
+      color: $textDark;
+      text-align: center;
     }
 
     ul {
@@ -215,7 +222,24 @@ banner {
     }
   }
 
+}
 
+#scorecard {
+  tr:hover td {
+    background-color: $backgroundBeige;
+  }
+
+  th {
+    background-color: #3CB47A;
+    font-weight: 600;
+    color: white;
+    font-size: 110%;
+  }
+
+  th, td {
+    border: 1px solid #000000;
+    padding: 7px;
+  }
 }
 
 // sweetAlert overrides
@@ -236,12 +260,16 @@ banner {
     margin-top: 2em;
   }
 
-  a {
-    color: $greenLight;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
+}
+
+a {
+  color: $greenLight;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:visited {
+    background-color: $greenDark;
   }
 }
 
